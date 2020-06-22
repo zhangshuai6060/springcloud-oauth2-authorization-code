@@ -1,0 +1,27 @@
+server:
+  port: 9090
+spring:
+  application:
+    name: springcloud-oauth-auth
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.3.37/test?useUnicode=true&characterEncoding=utf8&useSSL=false&zeroDateTimeBehavior=convertToNull
+    password: zhangxiaoyun123
+    username: root
+  resources:
+    static-locations: classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/,classpath:/templates/
+  thymeleaf:
+    encoding: UTF-8
+    suffix: .html
+    cache: false
+    # 配置前缀时必须加templates，浏览器访问页面时不加templates路径
+    prefix: classpath:/templates/
+#cloud:
+#  nacos:
+#    discovery:
+#      #指定nacos server的地址
+#      server-addr: 127.0.0.1:8848
+
+logging:
+  level:
+    cloud.zxy.system: debug
